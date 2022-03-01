@@ -1,1 +1,1 @@
-# compresssion-mimo-channels
+# compression-mimo-channels
