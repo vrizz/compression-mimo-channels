@@ -10,7 +10,7 @@ After you have downloaded and extracted the dataset, and you have put it in the 
 
 # Citation
 
-If you are using this code and/or the provided dataset for your research, please consider citing us 📚 :
+If you are using this code and/or the provided dataset for your research, please cite 📚 :
 ```
 @inproceedings{rizzello2022compression,
     title={Compression Techniques for {MIMO} Channels in {FDD} Systems},
