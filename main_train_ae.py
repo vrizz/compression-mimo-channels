@@ -33,7 +33,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from torch.utils.data import TensorDataset, DataLoader
 
-from dataset_init_no_prep import get_dataset, get_dl_test_set
+from dataset_init_utils import get_dataset, get_dl_test_set
 from pytorchtools import EarlyStopping
 
 
@@ -266,6 +266,8 @@ def main(config, device_name="gpu", device_number="0"):
 
     print('Execution time:', '{:5.2f}'.format(time.time() - start_time), 'seconds')
     print('----------------------------------------------------')
+
+    model.load_state_dict(torch.load(os.path.join(foldername, 'checkpoint.pt')))
 
     loss_file = open(os.path.join(foldername, 'loss_data.txt'), 'w')
 
