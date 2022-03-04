@@ -183,12 +183,11 @@ def main(config, device_name="gpu", device_number="0"):
     p1 = patch_size_combinations[idx][0]
     p2 = patch_size_combinations[idx][1]
 
-    foldername = 'vq' + '_decay_' + str(config["decay"]) + \
-                 '_num_embeddings_' + str(config["num_embeddings"]) + \
-                 '_patch_size_idx_' + str(config["patch_sizes_idx"]) + \
-                 '_h1_' + str(config["h1"]) + '_h2_' + str(config["h2"]) + '_h3_' + str(config["h3"]) + \
-                 '_hidden_dim_' + str(config["hidden_dim"]) + '_lr_' + str(config["lr"]) + \
-                 '_batch_size_' + str(config["batch_size"])
+    foldername = 'vq_'
+
+    for j, key in enumerate(config.keys()):
+        foldername += f'{key}_{config[key]}_'
+
 
     if not os.path.exists(foldername):
         os.mkdir(foldername)

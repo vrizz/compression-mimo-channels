@@ -150,12 +150,6 @@ def main(config, device_name="gpu", device_number="0"):
     dl_test_loader_1 = DataLoader(dl_test_set_1, batch_size=1000, shuffle=False)
 
     if config['type'] == 'slvit':
-        foldername = config['type'] + \
-                     '_mode_' + config["mode"] + \
-                     '_patch_size_idx_' + str(config["patch_sizes_idx"]) + \
-                     '_h1_' + str(config["h1"]) + '_h2_' + str(config["h2"]) + '_h3_' + str(config["h3"]) + \
-                     '_hidden_dim_' + str(config["hidden_dim"]) + '_lr_' + str(config["lr"]) + \
-                     '_batch_size_' + str(config["batch_size"])
 
         patch_size_combinations = [
             [8, 8],
@@ -187,15 +181,6 @@ def main(config, device_name="gpu", device_number="0"):
 
     else:
         if config["mode"] == "strided":
-            foldername = config['type'] + \
-                         '_mode_' + config["mode"] + \
-                         '_filter1_' + str(config["filter1"]) + \
-                         '_filter2_' + str(config["filter2"]) + '_filter3_' + str(config["filter3"]) + \
-                         'k1_' + str(config["k1"]) + \
-                         '_k2_' + str(config["k2"]) + '_k3_' + str(config["k3"]) + \
-                         '_strides_idx_' + str(config["strides_idx"]) + \
-                         '_lr_' + str(config["lr"]) + \
-                         '_batch_size_' + str(config["batch_size"])
 
             strides_combinations = [
                 [2, 4, 2],
@@ -213,14 +198,6 @@ def main(config, device_name="gpu", device_number="0"):
             ).to(device=device)
 
         else:
-            foldername = config['type'] + \
-                         '_mode_' + config["mode"] + \
-                         '_filter1_' + str(config["filter1"]) + \
-                         '_filter2_' + str(config["filter2"]) + '_filter3_' + str(config["filter3"]) + \
-                         'k1_' + str(config["k1"]) + \
-                         '_k2_' + str(config["k2"]) + '_k3_' + str(config["k3"]) + \
-                         '_lr_' + str(config["lr"]) + \
-                         '_batch_size_' + str(config["batch_size"])
 
             if config["mode"] == "pooling":
                 model = ConvNet(
@@ -235,6 +212,11 @@ def main(config, device_name="gpu", device_number="0"):
                     enc_kernel_ls=[config["k1"], config["k2"], config["k3"]],
                     enc_scaling_factors=[0.5, 0.5, 0.5], pooling=False
                 ).to(device=device)
+
+    foldername = ''
+
+    for j, key in enumerate(config.keys()):
+        foldername += f'{key}_{config[key]}_'
 
     if not os.path.exists(foldername):
         os.mkdir(foldername)
