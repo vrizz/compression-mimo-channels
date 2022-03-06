@@ -2,7 +2,7 @@
 
 Hello 👋 , this is the PyTorch code for reproducing the results of the paper "Compression Techniques For MIMO Channels in FDD Systems", presented in the IEEE DSLW 2022.
 
-# Data download 
+# Data download
 
 The channel dataset can be downloaded here as a `.zip` file: https://drive.google.com/file/d/1hr_qP8EMameVhbFwu2A1WMJJrZy14ucw/view?usp=sharing.
 
