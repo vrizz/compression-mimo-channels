@@ -20,6 +20,6 @@ If you are using this code and/or the provided dataset for your research, please
     volume={},  
     number={},  
     pages={1-6},  
-    doi={10.1109/DSLW53931.2022.9820270}}
+    doi={10.1109/DSLW53931.2022.9820270}
 }
 ```
