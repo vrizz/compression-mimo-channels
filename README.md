@@ -1,6 +1,6 @@
 # Compression techniques for MIMO channels in FDD systems
 
-Hello 👋 , this is the PyTorch code for reproducing the results of the paper [Compression Techniques For MIMO Channels in FDD Systems](https://ieeexplore.ieee.org/document/9820270), presented in the IEEE DSLW 2022 which received the Audice Choice Award.
+Hello 👋 , this is the PyTorch code for reproducing the results of the paper [Compression Techniques For MIMO Channels in FDD Systems](https://ieeexplore.ieee.org/document/9820270), presented in the IEEE DSLW 2022 which received the Audience Choice Award.
 
 # Data download
 
