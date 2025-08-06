@@ -4,7 +4,7 @@ Hello 👋 , this is the PyTorch code for reproducing the results of the paper [
 
 # Data download
 
-The channel dataset can be downloaded [here](https://drive.google.com/file/d/1hr_qP8EMameVhbFwu2A1WMJJrZy14ucw/view?usp=sharing) as a `.zip` file.
+The channel dataset can be downloaded [here](https://huggingface.co/datasets/valerizz/compression-mimo-channels/blob/main/mimo_umi_nlos.zip) as a `.zip` file.
 
 After you have downloaded and extracted the dataset, and you have put it in the same folder of the source-code, you can run the Python files `main_train_ae` and `main_train_ae_quant` successfully.
 
