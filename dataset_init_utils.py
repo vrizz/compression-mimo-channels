@@ -29,11 +29,11 @@ def train_test_split(X):
 def get_dataset(direction='uplink', scenario_name='berlin', gap='2', dim_c=1):
 
     if direction == 'uplink':
-        filename = scenario_name + '_' + '/ch_ul.mat'
+        filename = scenario_name + '/ch_ul.mat'
         mask_n = 'ch_ul'
 
     elif direction == 'downlink':
-        filename = scenario_name + '_' + '/ch_dl_' + gap + '.mat'
+        filename = scenario_name + '/ch_dl_' + gap + '.mat'
         mask_n = 'ch_dl_' + gap
 
     data_real, data_imag = real_and_imag_channel(file=filename, mask=mask_n)
@@ -65,10 +65,10 @@ def get_dataset(direction='uplink', scenario_name='berlin', gap='2', dim_c=1):
 def get_dl_test_set(scenario_name='berlin', gap='2'):
 
     if gap == '1':
-        filename = scenario_name + '_' + '/ch_dl.mat'
+        filename = scenario_name + '/ch_dl.mat'
         mask_n = 'ch_dl'
     else:
-        filename = scenario_name + '_' + '/ch_dl_' + gap + '.mat'
+        filename = scenario_name + '/ch_dl_' + gap + '.mat'
         mask_n = 'ch_dl_' + gap
 
     data_real, data_imag = real_and_imag_channel(file=filename, mask=mask_n)
